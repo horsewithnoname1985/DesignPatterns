@@ -6,10 +6,17 @@ public abstract class Duck {
     QuackBehaviour quackBehaviour;
 
     public Duck() {
-
     }
 
     public abstract void display();
+
+    public void setFlyBehaviour(FlyBehaviour fb) {
+        flyBehaviour = fb;
+    }
+
+    public void setQuackBehaviour(QuackBehaviour qb) {
+        quackBehaviour = qb;
+    }
 
 
     public void performQuack() {
@@ -20,7 +27,7 @@ public abstract class Duck {
         flyBehaviour.fly();
     }
 
-    public void swim(){
+    public void swim() {
         System.out.println("All ducks float, even decoys.");
     }
 
